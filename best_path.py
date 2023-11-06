@@ -21,17 +21,29 @@ def drawGrid(gridSize, gridColor):
 
 def runGame():
     pygame.init()
-
+    gridSize = 50
     backgroundColor = (255, 255, 255)
+    blue = (0, 141, 207)
     pygame.display.set_caption("Best Path")
     running = True
-
+    count = 0
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == pygame.BUTTON_LEFT:
+                    # Fill the screen with blue upon left button click
+                    x, y = event.pos
+                    i = x // gridSize
+                    j = x // gridSize
+
+                    count += 1
+                    print(f"Button Clicked {count}, x = {x} y = {y}")
+
+        # Fill the screen with the background color
         screen.fill(backgroundColor)
-        drawGrid(50, (200, 200, 200))
+        drawGrid(gridSize, (200, 200, 200))
         pygame.display.flip()
 
 
