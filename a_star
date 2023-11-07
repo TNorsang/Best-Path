@@ -1,5 +1,6 @@
 from pyamaze import maze
-m = maze(5,5)
-m.CreateMaze()
 
+row,column = 5,5
+m = maze(row,column)
+m.CreateMaze()
 m.run()
