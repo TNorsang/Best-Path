@@ -14,7 +14,7 @@ def drawGrid(gridSize, gridColor):
 
 def runGame():
     pygame.init()
-    gridSize = 50
+    gridSize = 180
     backgroundColor = (255, 255, 255)
     blue = (0, 141, 207)
     pygame.display.set_caption("Best Path")
