@@ -1,6 +1,10 @@
 from pyamaze import maze
 
-row,column = 5,5
-m = maze(row,column)
+row, column = 5, 5
+m = maze(row, column)
 m.CreateMaze()
 m.run()
+
+
+def aStarAlgorithm():
+    pass
