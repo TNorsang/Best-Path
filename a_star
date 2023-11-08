@@ -1,10 +1,32 @@
+# Importing Maze from Pyamaze
 from pyamaze import maze
 
-row, column = 5, 5
-m = maze(row, column)
-m.CreateMaze()
-m.run()
+row, col = 5, 5
 
 
+# Function to create a maze
+def createMaze(row, col):
+    m = maze(row, col)
+    m.CreateMaze()
+    m.run()
+
+
+# Creating the Maze
+createMaze(row, col)
+
+
+# g(n) = The distance from the Start Node to the Current Node
+def gDistance():
+    pass
+
+
+# h(n) = The distance from the Current Node to the Goal Node
+def hDistance():
+    pass
+
+
+# f(n) = The total Distance of g(n) + h(n) which decides the direction
 def aStarAlgorithm():
     pass
+
+# Queue Priority
