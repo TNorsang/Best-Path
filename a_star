@@ -1,33 +1,52 @@
 # Importing Maze from Pyamaze
-from pyamaze import maze
+from pyamaze import maze, agent
 
+# Using Manhattan Distance
+
+
+# h(n) = The distance from the Current Node to the Goal Node
+def hDistance(currentNode, goalNode):
+    x1, y1 = currentNode
+    x2, y2 = goalNode
+    distance = abs(x1-x2) + abs(y1-y2)
+
+    return distance
+
+
+# A* Algorithm
+def aStarAlgorithm(m):
+    pass
+
+
+# g(n) = The distance from the Start Node to the Current Node
+def gDistance(startNode, currentNode):
+    # Need the Start Node and the Current Node
+    pass
+
+
+# f(n) = The total Distance of g(n) + h(n) which decides the direction
 row, col = 5, 5
+values = None
 
 
 # Function to create a maze
 def createMaze(row, col):
     m = maze(row, col)
     m.CreateMaze()
+    a = agent(m, footprints=True)
+
+    # m.tracePath({a: m.path})
+
+    # Dictionary Values. Key = Row,Column : Value = East,West,North,South Boundaires with binary value 0 or 1
+    values = m.maze_map
     m.run()
 
 
 # Creating the Maze
 createMaze(row, col)
+print(values)
 
+# print(values)
 
-# g(n) = The distance from the Start Node to the Current Node
-def gDistance(x, y):
-    # Need the Start Node and the Current Node
-    pass
-
-
-# h(n) = The distance from the Current Node to the Goal Node
-def hDistance():
-    pass
-
-
-# f(n) = The total Distance of g(n) + h(n) which decides the direction
-def aStarAlgorithm():
-    pass
 
 # Queue Priority
