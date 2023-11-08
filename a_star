@@ -16,7 +16,8 @@ createMaze(row, col)
 
 
 # g(n) = The distance from the Start Node to the Current Node
-def gDistance():
+def gDistance(x, y):
+    # Need the Start Node and the Current Node
     pass
 
 
